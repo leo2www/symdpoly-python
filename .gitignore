@@ -3,3 +3,9 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# mosek需要用户自己安装
+dependencies/mosek/*
+
+# .gitkeek 标记需要保留的文件夹
+!**/.gitkeep
