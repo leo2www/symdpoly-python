@@ -1,0 +1,3 @@
+[submodule "dependencies/metal"]
+	path = dependencies/metal
+	url = git@github.com:leo2www/metal.git

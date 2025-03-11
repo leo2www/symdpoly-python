@@ -6,6 +6,8 @@ hs_err_pid*
 
 # mosek需要用户自己安装
 dependencies/mosek/*
+**/mosek.lic
+**/mosek.jar
 
 # .gitkeek 标记需要保留的文件夹
 !**/.gitkeep
