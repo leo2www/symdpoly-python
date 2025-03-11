@@ -9,3 +9,4 @@ dependencies/mosek/*
 
 # .gitkeek 标记需要保留的文件夹
 !**/.gitkeep
+denpendencies/mosek/mosektools-*.tar.bz2

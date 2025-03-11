@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  symdpoly-app: # 服务名
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    # 指定容器名（物理名，唯一）不能横向扩展，
+    # 服务名访问即可
+    # container_name: app-devcontainer-withcuda
+
+    volumes:
+      # Update this to wherever you want VS Code to mount the folder of your project
+      - ../..:/workspaces:cached
+      # - ../..:/workspaces
+    command: sleep infinity
+
+    # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
+    # networks: 
+    #   - dev-container-network
+
+# networks:
+#   dev-container-network:
+#     name: dev_container_network_shared
+#     driver: bridge

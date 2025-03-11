@@ -1,0 +1,29 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "Symdpoly-python",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "symdpoly-app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+
+	
+	"features": {
+		"ghcr.io/leo2www/devcontainer-features/scala-sdkman:latest": {
+			// feature 默认 containerEnv 设定 
+			// "SDKMAN_DIR": "/usr/local/sdkman",
+    		// "JAVA_HOME": "/usr/local/sdkman/candidates/java/current",
+			"installSbt": true,
+			// sdkman  安装 https://sdkman.io/jdks/#amzn 参考得到不同版本安装代码
+			// https://github.com/corretto/corretto-21/releases 可以获得x.y.z 版本号
+			"specificJavaVersion":"21.0.6-amzn",
+			"sbtVersion": "latest"
+		}
+	},
+
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// 使用vscode用户，这是feature的默认身份；
+	// 尽量不修改以获得feature的最大程度支持。比如 ghcr.io/ebaskoro/devcontainer-features/scala 会搜索用户名 "vscode" "node" "codespace"
+	"remoteUser": "vscode"
+}
